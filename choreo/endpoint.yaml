@@ -1,0 +1,82 @@
+version: 1.0.0
+info:
+  title: BiteSpeed API
+  version: 1.0.0
+  description: API for BiteSpeedTask application
+endpoints:
+  /newRecord:
+    post:
+      summary: Insert a new record
+      operationId: insertData
+      requestBody:
+        description: Request entity for inserting new record
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RequestEntity'
+      responses:
+        '200':
+          description: Successful response with created record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseContactEntity'
+        '400':
+          description: Bad request
+  /identify:
+    post:
+      summary: Identify related data
+      operationId: identify
+      requestBody:
+        description: Request entity for identifying data
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RequestEntity'
+      responses:
+        '200':
+          description: Successful response with related data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseContactClass'
+  /test:
+    get:
+      summary: Test Docker setup
+      operationId: testDocker
+      responses:
+        '200':
+          description: Successful test response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseString'
+components:
+  schemas:
+    RequestEntity:
+      type: object
+      properties:
+        # Add fields for RequestEntity here
+    ContactEntity:
+      type: object
+      properties:
+        # Add fields for ContactEntity here
+    ResponseContactClass:
+      type: object
+      properties:
+        # Add fields for ResponseContactClass here
+    ResponseString:
+      type: object
+      properties:
+        data:
+          type: string
+    ResponseContactEntity:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/ContactEntity'
+
+has context menu
+
