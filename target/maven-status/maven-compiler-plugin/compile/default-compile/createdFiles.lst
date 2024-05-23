@@ -1,0 +1,11 @@
+com\bitesped\repository\BIteSpeedRepository.class
+com\bitesped\BiteSpeedTaskApplication.class
+com\bitesped\dto\LinkPrecedence.class
+com\bitesped\entity\ContactEntity.class
+com\bitesped\entity\RequestEntity.class
+com\bitesped\entity\Response.class
+com\bitesped\service\ServiceClass.class
+com\bitesped\controller\TaskController.class
+com\bitesped\dto\ResponseContactClass.class
+com\bitesped\service\IdentifyService.class
+com\bitesped\exception\Exception.class
